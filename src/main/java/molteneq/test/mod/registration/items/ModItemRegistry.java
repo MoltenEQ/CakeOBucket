@@ -1,10 +1,8 @@
 package molteneq.test.mod.registration.items;
 
 import molteneq.test.mod.ExampleMod;
-import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.SwordItem;
-import net.minecraft.world.item.Tiers;
+import net.minecraft.world.item.*;
+import net.minecraft.world.level.block.Block;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.fmllegacy.RegistryObject;
@@ -27,6 +25,19 @@ public class ModItemRegistry {
         //event listener beállytása (honnan jöhetnek eventek)
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         ITEMS.register(modEventBus);
+    }
+
+    /**
+     * create item for said block
+     * @param block
+     * @param name
+     * @param category
+     * @param <T>
+     * @return
+     */
+    public static <T extends  Block> T RegisterItemForBlock(T block, String name, CreativeModeTab category){
+        ITEMS.register(name, () -> new BlockItem(block, new Item.Properties().tab(category)));
+        return block;
     }
 }
 
