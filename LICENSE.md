@@ -1,3 +1,5 @@
+**THIS IS THE ORIGINAL FORGE MDK LICENCE, CHANGES ARE NEEDED**
+
 Unless noted below, Minecraft Forge, Forge Mod Loader, and all 
 parts herein are licensed under the terms of the LGPL 2.1 found
 here http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt and 
