@@ -9,8 +9,8 @@
 * */
 package molteneq.test.mod;
 
-import molteneq.test.mod.blocks.ModBlockRegistry;
-import molteneq.test.mod.items.ModItemRegistry;
+import molteneq.test.mod.registration.blocks.ModBlockRegistry;
+import molteneq.test.mod.registration.items.ModItemRegistry;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
@@ -29,6 +29,7 @@ import org.apache.logging.log4j.Logger;
 public class ExampleMod
 {
     public static final String MODID = "testmod";
+    public static final String MODNAME = "Test Mod";
     // Directly reference a log4j logger.
     private static final Logger LOGGER = LogManager.getLogger(); //pl: hibak logolasara, ne spammeld
 
@@ -36,7 +37,7 @@ public class ExampleMod
      * Initcializáláshoz, a konstruktor hívja meg
      */
     private void Initialization() {
-        LOGGER.info("ExampleMod init started");
+        LOGGER.info(MODNAME+ " init started");
         ModBlockRegistry.Init();
         ModItemRegistry.Init();
     }
