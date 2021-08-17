@@ -13,7 +13,7 @@ public class ModItemRegistry {
 
     private static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, ExampleMod.MODID);
 
-    public static final RegistryObject<Item> EXAMPLE_SWORD = ITEMS.register("example_sword",() -> {
+    public static final RegistryObject<Item> EXAMPLE_SWORD = ITEMS.register("test_sword",() -> {
         return new SwordItem(Tiers.NETHERITE /*Tier*/,
                 20 /*Attack damage*/,
                 0.1f /*Attack speed*/,

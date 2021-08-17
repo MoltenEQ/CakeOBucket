@@ -1,4 +1,4 @@
 {
-  "item.testmod.example_sword": "Test Sword",
-  "block.testmod.example_block": "Test Block"
+  "item.testmod.test_sword": "Test Sword",
+  "block.testmod.test_block": "Test Block"
 }

@@ -20,7 +20,7 @@ public class ModBlockRegistry {
     //regisztrálásra előkészítés (előbb jön létre, mint ahogy regisztráljuk), itt blokk lista
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, ExampleMod.MODID);
     //blokk regisztrálása a listánkba (hogy jöjjön létre)
-    public static final RegistryObject<Block> EXAMPLE_BLOCK = BLOCKS.register("example_block", () -> {
+    public static final RegistryObject<Block> EXAMPLE_BLOCK = BLOCKS.register("test_block", () -> {
         return   RegisterItemForBlock (new Block(BlockBehaviour.Properties.of(Material.STONE) //anyag típusa -> hang
                 .harvestLevel(2) //milyen típusú csákány kell
                 .harvestTool(ToolType.PICKAXE) // csákány kell
