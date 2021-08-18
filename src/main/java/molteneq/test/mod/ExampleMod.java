@@ -9,11 +9,12 @@
 * */
 package molteneq.test.mod;
 
-import molteneq.test.mod.registration.blocks.ModBlockRegistry;
-import molteneq.test.mod.registration.items.ModItemRegistry;
+import molteneq.test.mod.registration.ModBlockRegistry;
+import molteneq.test.mod.registration.ModItemRegistry;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
@@ -45,17 +46,20 @@ public class ExampleMod
     public ExampleMod() {
         Initialization();
         // Register the setup method for modloading
-        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
+        IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
+        bus.addListener(this::setup);
         // Register the enqueueIMC method for modloading
-        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::enqueueIMC);
+        bus.addListener(this::enqueueIMC);
         // Register the processIMC method for modloading
-        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::processIMC);
+        bus.addListener(this::processIMC);
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
     }
 
-    private void setup(final FMLCommonSetupEvent event) //általában itt nincs sok teendő
+    //általában itt nincs sok teendő, már minden regisztrálva kéne legyen
+    //Konfig ez előtt legyen
+    private void setup(final FMLCommonSetupEvent event)
     {
         // some preinit code
         // LOGGER.info("HELLO FROM PREINIT");

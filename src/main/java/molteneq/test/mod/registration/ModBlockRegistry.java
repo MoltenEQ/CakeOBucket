@@ -1,19 +1,17 @@
-package molteneq.test.mod.registration.blocks;
+package molteneq.test.mod.registration;
 
 import molteneq.test.mod.ExampleMod;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
-import net.minecraft.world.level.material.MaterialColor;
-import net.minecraft.world.level.material.PushReaction;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.fmllegacy.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
-import static molteneq.test.mod.registration.items.ModItemRegistry.RegisterItemForBlock;
+import static molteneq.test.mod.registration.ModItemRegistry.RegisterItemForBlock;
 
 public class ModBlockRegistry {
     //regisztrálásra előkészítés (előbb jön létre, mint ahogy regisztráljuk), itt blokk lista
