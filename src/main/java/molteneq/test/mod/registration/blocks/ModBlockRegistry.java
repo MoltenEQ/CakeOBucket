@@ -7,7 +7,6 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
 import net.minecraft.world.level.material.MaterialColor;
 import net.minecraft.world.level.material.PushReaction;
-import net.minecraftforge.common.ToolType;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.fmllegacy.RegistryObject;
@@ -22,8 +21,6 @@ public class ModBlockRegistry {
     //blokk regisztrálása a listánkba (hogy jöjjön létre)
     public static final RegistryObject<Block> EXAMPLE_BLOCK = BLOCKS.register("test_block", () -> {
         return   RegisterItemForBlock (new Block(BlockBehaviour.Properties.of(Material.STONE) //anyag típusa -> hang
-                .harvestLevel(2) //milyen típusú csákány kell
-                .harvestTool(ToolType.PICKAXE) // csákány kell
                 .explosionResistance(100f)
                 .destroyTime( 10f )),
                 "test_block",
