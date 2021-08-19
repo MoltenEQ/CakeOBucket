@@ -19,11 +19,15 @@ public class ModItemModelProvider extends ItemModelProvider{
     @Override
     protected void registerModels() {
         //item lekérdezése,
-        this.singleTexture(ModItemRegistry.TEST_SWORD.get().getRegistryName().getPath(),
+        singleTexture(ModItemRegistry.TEST_SWORD.get().getRegistryName().getPath(),
                 new ResourceLocation("item/handheld"), //használt modell,
                 "layer0", //textúra szint?
                 new ResourceLocation(ExampleMod.MODID,"item/test_sword")); //textúra helye
                 // a modLoc elméletileg megától belerakja az id-t
+        singleTexture(ModItemRegistry.TEST_ITEM.get().getRegistryName().getPath(),
+                new ResourceLocation("item/generated"),
+                "layer0",
+                new ResourceLocation(ExampleMod.MODID,"item/temp"));
 
 //        withExistingParent("test_block", modLoc("block/test_bock"));
 //        withExistingParent( "test_sword", modLoc("block/test_sword"));
