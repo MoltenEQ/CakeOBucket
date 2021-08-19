@@ -13,14 +13,16 @@ import net.minecraftforge.forge.event.lifecycle.GatherDataEvent;
 public class DataGenerators {
         private DataGenerators() {}
 
-    //Milyen eseményre iratkozunk fel?
+    //Akkor sül el, ha runData-val futtatunk, alkalmas adat generálásra (pl.: modellek json-ja)
     @SubscribeEvent
     public static void gatherData(GatherDataEvent event) {
 
             //Mit is csinálunk?
          DataGenerator gen = event.getGenerator();
-         ExistingFileHelper existingFileHelper = event.getExistingFileHelper();
-
-        gen.addProvider(new ModItemModelProvider(gen, existingFileHelper));
+         if (event.includeClient())
+         {
+             ExistingFileHelper existingFileHelper = event.getExistingFileHelper();
+             gen.addProvider(new ModItemModelProvider(gen, existingFileHelper));
+         }
     }
 }
