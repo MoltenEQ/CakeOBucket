@@ -2,7 +2,9 @@ package molteneq.test.mod.data.client;
 
 import molteneq.test.mod.ExampleMod;
 import molteneq.test.mod.data.DataGenerators;
+import molteneq.test.mod.registration.ModItemRegistry;
 import net.minecraft.data.DataGenerator;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.client.model.generators.ItemModelProvider;
 import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
@@ -16,15 +18,24 @@ public class ModItemModelProvider extends ItemModelProvider{
 
     @Override
     protected void registerModels() {
-        withExistingParent("test_block", modLoc("block/test_bock"));
-        withExistingParent( "test_sword", modLoc("block/test_sword"));
+        //item lekérdezése,
+        this.singleTexture(ModItemRegistry.TEST_SWORD.get().getRegistryName().getPath(),
+                new ResourceLocation("item/handheld"), //használt modell,
+                "layer0", //textúra szint?
+                new ResourceLocation(ExampleMod.MODID,"item/test_sword")); //textúra helye
+                // a modLoc elméletileg megától belerakja az id-t
 
-        ModelFile itemGenerated = getExistingFile(mcLoc("item/generated"));
-
-        builder(itemGenerated, "test_sword");
+//        withExistingParent("test_block", modLoc("block/test_bock"));
+//        withExistingParent( "test_sword", modLoc("block/test_sword"));
+//        withExistingParent( "test_item", modLoc("block/test_test"));
+//
+//        ModelFile itemGenerated = getExistingFile(mcLoc("item/generated"));
+//
+//        builder(itemGenerated, "test_sword");
+//        builder(itemGenerated, "test_item");
     }
 
-    private void builder(ModelFile itemGenerated, String name) {
-        getBuilder(name).parent(itemGenerated).texture("layer0", "item/" + name);
-    }
+//    private void builder(ModelFile itemGenerated, String name) {
+//        getBuilder(name).parent(itemGenerated).texture("layer0", "item/" + name);
+//    }
 }

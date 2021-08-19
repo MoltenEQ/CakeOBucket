@@ -1,20 +1,17 @@
-package molteneq.test.mod.registration.blocks;
+package molteneq.test.mod.registration;
 
 import molteneq.test.mod.ExampleMod;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
-import net.minecraft.world.level.material.MaterialColor;
-import net.minecraft.world.level.material.PushReaction;
-import net.minecraftforge.common.ToolType;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.fmllegacy.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
-import static molteneq.test.mod.registration.items.ModItemRegistry.RegisterItemForBlock;
+import static molteneq.test.mod.registration.ModItemRegistry.RegisterItemForBlock;
 
 public class ModBlockRegistry {
     //regisztrálásra előkészítés (előbb jön létre, mint ahogy regisztráljuk), itt blokk lista
@@ -22,8 +19,6 @@ public class ModBlockRegistry {
     //blokk regisztrálása a listánkba (hogy jöjjön létre)
     public static final RegistryObject<Block> EXAMPLE_BLOCK = BLOCKS.register("test_block", () -> {
         return   RegisterItemForBlock (new Block(BlockBehaviour.Properties.of(Material.STONE) //anyag típusa -> hang
-                .harvestLevel(2) //milyen típusú csákány kell
-                .harvestTool(ToolType.PICKAXE) // csákány kell
                 .explosionResistance(100f)
                 .destroyTime( 10f )),
                 "test_block",
