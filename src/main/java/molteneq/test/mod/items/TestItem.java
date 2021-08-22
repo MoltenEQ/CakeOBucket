@@ -38,7 +38,7 @@ public class TestItem extends PickaxeItem {
         super.appendHoverText(stack, level, list, flag);
         // kliensoldali oldal, így nem módosul a tárgy, amikor pl. megnézzük a GUI-ban
         int distance = stack.hasTag() ? stack.getTag().getInt("distance") : 0;
-        list.add(new TranslatableComponent("message.test_item.tooltip", Integer.toString(distance))
+        list.add(new TranslatableComponent("message.test_item.tooltip", Integer.toString(distance+1))
                 .withStyle(ChatFormatting.BLUE)); //Stílus beállítása
     }
 
@@ -92,7 +92,7 @@ public class TestItem extends PickaxeItem {
         stack.getTag().putInt("distance", distance);
 
         if (level.isClientSide()) { //kliensen üzenetküldés
-            player.sendMessage(new TranslatableComponent("message.test_item.change", Integer.toString(distance)), Util.NIL_UUID);
+            player.sendMessage(new TranslatableComponent("message.test_item.change", Integer.toString(distance+1)), Util.NIL_UUID);
         }
         return InteractionResultHolder.success(stack); // sikeres használat
         // return super.use(level, player, hand); Ha az eredeti használati módot is megvalósítanánk

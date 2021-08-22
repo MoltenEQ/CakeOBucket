@@ -20,7 +20,7 @@ public class ModItemRegistry {
         ITEMS.register(modEventBus);
     }
 
-    public static final RegistryObject<Item> TEST_ITEM = ITEMS.register("test_item",() -> {
+    public static final RegistryObject<TestItem> TEST_ITEM = ITEMS.register("test_item",() -> {
         return new TestItem(new Item.Properties()); //
     });
 
