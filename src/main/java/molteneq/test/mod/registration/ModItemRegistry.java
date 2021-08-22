@@ -21,7 +21,9 @@ public class ModItemRegistry {
     }
 
     public static final RegistryObject<TestItem> TEST_ITEM = ITEMS.register("test_item",() -> {
-        return new TestItem(new Item.Properties()); //
+        return new TestItem(new Item.Properties()
+                .defaultDurability(4048)
+                .tab(CreativeModeTab.TAB_TOOLS)); //
     });
 
     public static final RegistryObject<Item> TEST_SWORD = ITEMS.register("test_sword",() -> {

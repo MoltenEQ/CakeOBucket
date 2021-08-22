@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "testmod:test_item"
+    ]
+  },
+  "criteria": {
+    "bones": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:nether_star"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "testmod:test_item"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "bones",
+      "has_the_recipe"
+    ]
+  ]
+}
