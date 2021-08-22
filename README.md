@@ -1,3 +1,8 @@
+**I am making a simple mod that allows the creation of the special food: Cake'O'Bucket (maybe Bucket'O'Cake?)!**
+Bucket'O'Cake will be a food source that has more than 64 uses, essentially a very high usage (maybe infinite?) food for late game.
+
+
+Off course I'm a total noob, so I will be following McJty's mod tutorials while I get to grips with Forge modding..
 
 # **THIS IS CURRENTLY THE ORIGINAL FORGE MDK README!**
 
