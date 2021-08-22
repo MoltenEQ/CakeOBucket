@@ -49,21 +49,21 @@ public class TestItem extends PickaxeItem {
 
     /// bányászás felülírása
     @Override
-    public boolean mineBlock(ItemStack stack, Level level, BlockState blockState, BlockPos blockPos, LivingEntity livingEntity) {
-        boolean result = super.mineBlock(stack, level, blockState, blockPos, livingEntity);
+    public boolean mineBlock(ItemStack stack, Level level, BlockState blockState, BlockPos blockPos, LivingEntity player) {
+        boolean result = super.mineBlock(stack, level, blockState, blockPos, player);
         if (result) {
             int dist = getDistance(stack);
             if (dist > 0) {
                 CompoundTag tag = stack.getOrCreateTag();
                 boolean mining = tag.getBoolean("mining");
                 if (!mining) {
-                    BlockHitResult hit = trace(level, livingEntity);
+                    BlockHitResult hit = trace(level, player);
                     if (hit.getType() == HitResult.Type.BLOCK) {
                         tag.putBoolean("mining", true);
                         for (int i = 0; i < dist; i++) {
                             // ömm, ez elég durvának néz ki... A hit merőleges az eltalált blokk eltalát oldalára?
                             BlockPos relative = blockPos.relative(hit.getDirection().getOpposite(), i + 1);
-                            if (tryHarvest(stack, livingEntity, relative)) {
+                            if (!tryHarvest(stack, player, relative)) {
                                 tag.putBoolean("mining", false);
                                 return result;
                             }
@@ -114,7 +114,7 @@ public class TestItem extends PickaxeItem {
         double reach = player.getAttribute(ForgeMod.REACH_DISTANCE.get()).getValue();
         Vec3 eye = player.getEyePosition(1.0f); // egységvektorként??
         Vec3 view = player.getViewVector(1.0f);
-        Vec3 withReach = eye.add(view.x * reach, view.y * reach, view.y * reach);
+        Vec3 withReach = eye.add(view.x * reach, view.y * reach, view.z * reach);
         return level.clip(new ClipContext(eye, withReach, ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, player));
     }
 }
