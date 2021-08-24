@@ -1,4 +1,4 @@
-package molteneq.test.mod.items;
+package molteneq.cake.o.bucket.mod.items;
 
 import com.mojang.datafixers.util.Pair;
 import net.minecraft.advancements.CriteriaTriggers;
@@ -21,6 +21,7 @@ import net.minecraft.world.level.gameevent.GameEvent;
 
 public class DurableFood extends Item {
     public DurableFood(Properties p_41383_) {
+
         super(p_41383_);
     }
 

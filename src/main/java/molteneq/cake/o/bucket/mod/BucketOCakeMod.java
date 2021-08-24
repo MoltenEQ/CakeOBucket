@@ -7,9 +7,9 @@
    - elfogyasztás után nem vész el, hanem csökken a tartóssága DONE
    - EXTRA: akár el is lehet varázsolni, hogy tartósabb legyen DONE
 * */
-package molteneq.test.mod;
+package molteneq.cake.o.bucket.mod;
 
-import molteneq.test.mod.registration.ModItemRegistry;
+import molteneq.cake.o.bucket.mod.registration.ModItemRegistry;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
@@ -25,11 +25,11 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
-@Mod("testmod")
-public class ExampleMod
+@Mod("cakeobucket")
+public class BucketOCakeMod
 {
-    public static final String MODID = "testmod";
-    public static final String MODNAME = "Test Mod";
+    public static final String MODID = "cakeobucket";
+    public static final String MODNAME = "Cake O'Bucket Mod";
     // Directly reference a log4j logger.
     private static final Logger LOGGER = LogManager.getLogger(); //pl: hibak logolasara, ne spammeld
 
@@ -41,7 +41,7 @@ public class ExampleMod
         ModItemRegistry.Init();
     }
 
-    public ExampleMod() {
+    public BucketOCakeMod() {
         Initialization();
         // Register the setup method for modloading
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();

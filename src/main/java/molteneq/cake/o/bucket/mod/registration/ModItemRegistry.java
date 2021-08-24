@@ -1,7 +1,7 @@
-package molteneq.test.mod.registration;
+package molteneq.cake.o.bucket.mod.registration;
 
-import molteneq.test.mod.ExampleMod;
-import molteneq.test.mod.items.DurableFood;
+import molteneq.cake.o.bucket.mod.BucketOCakeMod;
+import molteneq.cake.o.bucket.mod.items.DurableFood;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -12,7 +12,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 public class ModItemRegistry {
 
-    private static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, ExampleMod.MODID);
+    private static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, BucketOCakeMod.MODID);
 
     public static void Init() {
         //event listener beállytása (honnan jöhetnek eventek)

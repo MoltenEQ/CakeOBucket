@@ -1,11 +1,10 @@
-package molteneq.test.mod.data;
+package molteneq.cake.o.bucket.mod.data;
 
-import molteneq.test.mod.registration.ModItemRegistry;
+import molteneq.cake.o.bucket.mod.registration.ModItemRegistry;
 import net.minecraft.advancements.critereon.InventoryChangeTrigger;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.recipes.*;
 import net.minecraft.world.item.Items;
-import net.minecraftforge.common.Tags;
 
 import java.util.function.Consumer;
 

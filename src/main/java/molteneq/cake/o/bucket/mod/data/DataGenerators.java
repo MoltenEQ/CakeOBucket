@@ -1,7 +1,7 @@
-package molteneq.test.mod.data;
+package molteneq.cake.o.bucket.mod.data;
 
-import molteneq.test.mod.ExampleMod;
-import molteneq.test.mod.data.client.ModItemModelProvider;
+import molteneq.cake.o.bucket.mod.BucketOCakeMod;
+import molteneq.cake.o.bucket.mod.data.client.ModItemModelProvider;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -9,7 +9,7 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.forge.event.lifecycle.GatherDataEvent;
 
 //Mod event busz létrehozása?
-@Mod.EventBusSubscriber(modid = ExampleMod.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
+@Mod.EventBusSubscriber(modid = BucketOCakeMod.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class DataGenerators {
         private DataGenerators() {}
 
