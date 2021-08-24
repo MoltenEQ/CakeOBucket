@@ -9,8 +9,6 @@
 * */
 package molteneq.test.mod;
 
-import molteneq.test.mod.data.client.ClientSetup;
-import molteneq.test.mod.registration.ModBlockRegistry;
 import molteneq.test.mod.registration.ModItemRegistry;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.MinecraftForge;
@@ -40,7 +38,6 @@ public class ExampleMod
      */
     private void Initialization() {
         LOGGER.info(MODNAME+ " init started");
-        ModBlockRegistry.Init();
         ModItemRegistry.Init();
     }
 
@@ -50,7 +47,6 @@ public class ExampleMod
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
         bus.addListener(this::setup);
         //Saját osztály meghívása -> változó item textúra
-        bus.addListener(ClientSetup::setup);
         // Register the enqueueIMC method for modloading
         bus.addListener(this::enqueueIMC);
         // Register the processIMC method for modloading

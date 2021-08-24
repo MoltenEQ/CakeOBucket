@@ -1,8 +1,7 @@
 package molteneq.test.mod.registration;
 
 import molteneq.test.mod.ExampleMod;
-import molteneq.test.mod.items.DuraFood;
-import molteneq.test.mod.items.TestItem;
+import molteneq.test.mod.items.DurableFood;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -21,31 +20,18 @@ public class ModItemRegistry {
         ITEMS.register(modEventBus);
     }
     // Here we register Bucket'O'Cake
-    public static final RegistryObject<DuraFood> BUCKET_O_CAKE = ITEMS.register("bucket_o_cake",() -> {
-        return new DuraFood(new Item.Properties()
+    public static final RegistryObject<DurableFood> BUCKET_O_CAKE = ITEMS.register("bucket_o_cake",() -> {
+        return new DurableFood(new Item.Properties()
                 .rarity(Rarity.RARE)
                 .setNoRepair() // can't be repaired
                 // .stacksTo(1) Durability overrides?
                 .fireResistant()
-                .food(DuraFood.BUCKET_O_CAKE)
-                .defaultDurability(DuraFood.DEFAULT_DURABILITY) //128 uses by default
+                .food(DurableFood.BUCKET_O_CAKE)
+                .defaultDurability(DurableFood.DEFAULT_DURABILITY) //128 uses by default
                 .tab(CreativeModeTab.TAB_FOOD)); //
     });
 
-    public static final RegistryObject<TestItem> TEST_ITEM = ITEMS.register("test_item",() -> {
-        return new TestItem(new Item.Properties()
-                .defaultDurability(4048)
-                .tab(CreativeModeTab.TAB_TOOLS)); //
-    });
-
-    public static final RegistryObject<Item> TEST_SWORD = ITEMS.register("test_sword",() -> {
-        return new SwordItem(Tiers.NETHERITE /*Tier*/,
-                20 /*Attack damage*/,
-                0.1f /*Attack speed*/,
-                new Item.Properties().defaultDurability(1024) // tartósság
-                        .tab(CreativeModeTab.TAB_COMBAT)); // hol jelenjen meg a creatív menüben
-    });
-
+    @Deprecated
     /**
      * create item for said block
      * @param block

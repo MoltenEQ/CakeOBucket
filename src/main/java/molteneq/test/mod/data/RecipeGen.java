@@ -16,17 +16,6 @@ public class RecipeGen extends RecipeProvider {
 
     @Override //Eléggé magától értetődő
     protected void buildCraftingRecipes(Consumer<FinishedRecipe> consumer) {
-        ShapedRecipeBuilder.shaped(ModItemRegistry.TEST_ITEM.get())
-                .pattern("xzx")
-                .pattern(" y ")
-                .pattern(" s ")//mindig egyforma husszú kell legyen minden aorbN!
-                .define('x', Tags.Items.BONES)
-                .define('s', Items.STICK)
-                .define('z', Items.NETHERITE_PICKAXE)
-                .define('y', Items.NETHER_STAR)
-                .group("tutorial")
-                .unlockedBy("nether_star", InventoryChangeTrigger.TriggerInstance.hasItems(Items.NETHER_STAR))
-                .save(consumer);
 
         // BUCKET_O_CAKE RECIPE
         ShapelessRecipeBuilder.shapeless(ModItemRegistry.BUCKET_O_CAKE.get())

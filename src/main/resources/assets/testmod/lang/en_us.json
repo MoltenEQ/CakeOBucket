@@ -1,8 +1,3 @@
 {
-  "item.testmod.bucket_o_cake": "Bucket O'Cake",
-  "item.testmod.test_sword": "Test Sword",
-  "item.testmod.test_item": "Test Item",
-  "block.testmod.test_block": "Test Block",
-  "message.test_item.tooltip" : "This is a test item, %s charges",
-  "message.test_item.change" : "Charge level: %s"
+  "item.testmod.bucket_o_cake": "Bucket O'Cake"
 }

@@ -1,11 +1,3 @@
 c0ec46fee2ffb072f84c4753640fc7396eb6b29c assets/testmod/models/item/bucket_o_cake.json
-ba852c5761c95334a2e3bba2abf3ce5826b6a5d0 assets/testmod/models/item/test_item.json
-841e36889a79bba410001ac731efaecd36039f62 assets/testmod/models/item/test_item0.json
-6006221a9e16ed8d3158a27b4f4a35546428cf05 assets/testmod/models/item/test_item1.json
-9ee2e795c03b830ea89d5247406ace5c5d0b72da assets/testmod/models/item/test_item2.json
-169919751a0f371f05e1fad6c3bcd200c0f3e988 assets/testmod/models/item/test_item3.json
-0f42bd228009aff0409f986bdf5d59d38373d5f9 assets/testmod/models/item/test_sword.json
 b2ccac32c1e831643b805d7934ae31e17f8913bd data/testmod/advancements/recipes/food/bucket_o_cake.json
-afc29d3b298eab7ac69efc5848d44ee71a6824ef data/testmod/advancements/recipes/tools/test_item.json
 3299c46ce90583943de2b4d64adbe9f5cc8fd275 data/testmod/recipes/bucket_o_cake.json
-b0106bc772bc76519a28fd35aa47e9e96e154538 data/testmod/recipes/test_item.json

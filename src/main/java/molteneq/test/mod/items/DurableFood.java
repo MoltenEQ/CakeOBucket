@@ -19,8 +19,8 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.gameevent.GameEvent;
 
-public class DuraFood extends Item {
-    public DuraFood(Properties p_41383_) {
+public class DurableFood extends Item {
+    public DurableFood(Properties p_41383_) {
         super(p_41383_);
     }
 
