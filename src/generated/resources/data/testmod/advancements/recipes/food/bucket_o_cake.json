@@ -2,17 +2,17 @@
   "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
-      "testmod:test_item"
+      "testmod:bucket_o_cake"
     ]
   },
   "criteria": {
-    "nether_star": {
+    "golden_apple": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:nether_star"
+              "minecraft:golden_apple"
             ]
           }
         ]
@@ -21,13 +21,13 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "testmod:test_item"
+        "recipe": "testmod:bucket_o_cake"
       }
     }
   },
   "requirements": [
     [
-      "nether_star",
+      "golden_apple",
       "has_the_recipe"
     ]
   ]
