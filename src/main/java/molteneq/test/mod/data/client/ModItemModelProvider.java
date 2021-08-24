@@ -21,6 +21,12 @@ public class ModItemModelProvider extends ItemModelProvider{
 
     @Override
     protected void registerModels() {
+        //Give a single layer texture to it
+        singleTexture(ModItemRegistry.BUCKET_O_CAKE.get().getRegistryName().getPath(),
+                new ResourceLocation("item/generated"), //használt modell,
+                "layer0", //textúra szint?
+                new ResourceLocation(ExampleMod.MODID,"item/bucket_o_cake")); //textúra helye
+
         //item lekérdezése,
         singleTexture(ModItemRegistry.TEST_SWORD.get().getRegistryName().getPath(),
                 new ResourceLocation("item/handheld"), //használt modell,
