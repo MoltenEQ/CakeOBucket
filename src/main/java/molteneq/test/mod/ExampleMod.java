@@ -1,11 +1,11 @@
 /* Ötlet: torta a vödörben
    Egy olyan tárgy, ami képes a az éhség csökkentésére, de nem veszik el fogyasztás után, hanem helyette a tartósága csökken.
    Kell:
-   - egy olyan tárgy, amit meg lehet enni TODO
-   - van textúrája TODO
+   - egy olyan tárgy, amit meg lehet enni DONE
+   - van textúrája DONE
    - el lehet készíteni TODO
-   - elfogyasztás után nem vész el, hanem csökken a tartóssága TODO
-   - EXTRA: akár el is lehet varázsolni, hogy tartósabb legyen TODO
+   - elfogyasztás után nem vész el, hanem csökken a tartóssága DONE
+   - EXTRA: akár el is lehet varázsolni, hogy tartósabb legyen DONE
 * */
 package molteneq.test.mod;
 

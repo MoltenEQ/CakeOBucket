@@ -1,6 +1,7 @@
 package molteneq.test.mod.registration;
 
 import molteneq.test.mod.ExampleMod;
+import molteneq.test.mod.items.DuraFood;
 import molteneq.test.mod.items.TestItem;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.block.Block;
@@ -19,6 +20,17 @@ public class ModItemRegistry {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         ITEMS.register(modEventBus);
     }
+    // Here we register Bucket'O'Cake
+    public static final RegistryObject<DuraFood> BUCKET_O_CAKE = ITEMS.register("bucket_o_cake",() -> {
+        return new DuraFood(new Item.Properties()
+                .rarity(Rarity.RARE)
+                .setNoRepair() // can't be repaired
+                // .stacksTo(1) Durability overrides?
+                .fireResistant()
+                .food(DuraFood.BUCKET_O_CAKE)
+                .defaultDurability(DuraFood.DEFAULT_DURABILITY) //128 uses by default
+                .tab(CreativeModeTab.TAB_FOOD)); //
+    });
 
     public static final RegistryObject<TestItem> TEST_ITEM = ITEMS.register("test_item",() -> {
         return new TestItem(new Item.Properties()
