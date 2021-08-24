@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "cakeobucket:item/bucket_o_cake"
+  }
+}

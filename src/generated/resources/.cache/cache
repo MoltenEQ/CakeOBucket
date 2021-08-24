@@ -1,3 +1,3 @@
-c0ec46fee2ffb072f84c4753640fc7396eb6b29c assets/testmod/models/item/bucket_o_cake.json
-b2ccac32c1e831643b805d7934ae31e17f8913bd data/testmod/advancements/recipes/food/bucket_o_cake.json
-3299c46ce90583943de2b4d64adbe9f5cc8fd275 data/testmod/recipes/bucket_o_cake.json
+0e671d3aac3dafeb49ea192e302f228a593c9fda assets/cakeobucket/models/item/bucket_o_cake.json
+9391339fb7ab12dd87f402191c5d50d789b3f221 data/cakeobucket/advancements/recipes/food/bucket_o_cake.json
+6f5c1933810523d91d11723235dae46071213de0 data/cakeobucket/recipes/bucket_o_cake.json
