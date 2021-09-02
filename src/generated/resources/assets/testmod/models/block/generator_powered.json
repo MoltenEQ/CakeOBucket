@@ -1,0 +1,11 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "testmod:block/gen_block_side",
+    "up": "testmod:block/gen_block_side",
+    "north": "testmod:block/gen_block_front_powered",
+    "south": "testmod:block/gen_block_side",
+    "east": "testmod:block/gen_block_side",
+    "west": "testmod:block/gen_block_side"
+  }
+}

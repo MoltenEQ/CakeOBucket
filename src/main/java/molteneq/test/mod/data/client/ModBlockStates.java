@@ -29,6 +29,7 @@ public class ModBlockStates extends BlockStateProvider {
     protected void registerStatesAndModels() {
         // egyszerű blokk esetén
         // simpleBlock(ModBlockRegistry.GEN_BLOCK.get());
+        regGeneneratorBlock();
 
     }
 
