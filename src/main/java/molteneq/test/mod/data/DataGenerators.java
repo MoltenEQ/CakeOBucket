@@ -1,6 +1,7 @@
 package molteneq.test.mod.data;
 
 import molteneq.test.mod.ExampleMod;
+import molteneq.test.mod.data.client.ModBlockStates;
 import molteneq.test.mod.data.client.ModItemModelProvider;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.common.data.ExistingFileHelper;
@@ -23,6 +24,7 @@ public class DataGenerators {
          {
              ExistingFileHelper existingFileHelper = event.getExistingFileHelper();
              gen.addProvider(new ModItemModelProvider(gen, existingFileHelper));
+             gen.addProvider(new ModBlockStates(gen,existingFileHelper));
          }
 
         if (event.includeServer())

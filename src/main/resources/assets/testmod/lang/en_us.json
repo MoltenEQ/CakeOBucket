@@ -1,7 +1,10 @@
 {
   "item.testmod.test_sword": "Test Sword",
   "item.testmod.test_item": "Test Item",
-  "block.testmod.test_block": "Test Block",
+
+  "block.testmod.gen_block": "Generator Block",
+
   "message.test_item.tooltip" : "This is a test item, %s charges",
-  "message.test_item.change" : "Charge level: %s"
+  "message.test_item.change" : "Charge level: %s",
+  "message.gen_block": "The power generator"
 }

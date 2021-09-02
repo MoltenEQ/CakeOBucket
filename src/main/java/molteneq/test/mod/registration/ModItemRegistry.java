@@ -10,9 +10,12 @@ import net.minecraftforge.fmllegacy.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
+/**
+ * Itt regisztráljuk azokat a tárgyakat, amelyekhez nem tartozik blokk
+ */
 public class ModItemRegistry {
 
-    private static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, ExampleMod.MODID);
+    public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, ExampleMod.MODID);
 
     public static void Init() {
         //event listener beállytása (honnan jöhetnek eventek)
@@ -34,17 +37,17 @@ public class ModItemRegistry {
                         .tab(CreativeModeTab.TAB_COMBAT)); // hol jelenjen meg a creatív menüben
     });
 
-    /**
-     * create item for said block
-     * @param block
-     * @param name
-     * @param category
-     * @param <T>
-     * @return
-     */
-    public static <T extends  Block> T RegisterItemForBlock(T block, String name, CreativeModeTab category){
-        ITEMS.register(name, () -> new BlockItem(block, new Item.Properties().tab(category)));
-        return block;
-    }
+//    /**
+//     * create item for said block
+//     * @param block
+//     * @param name
+//     * @param category
+//     * @param <T>
+//     * @return
+//     */
+//    public static <T extends  Block> T RegisterItemForBlock(T block, String name, CreativeModeTab category){
+//        ITEMS.register(name, () -> new BlockItem(block, new Item.Properties().tab(category)));
+//        return block;
+//    }
 }
 
