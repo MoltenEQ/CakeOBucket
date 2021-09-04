@@ -1,9 +1,7 @@
-package molteneq.test.mod.data.client;
+package molteneq.testmod.data.client;
 
-import io.netty.handler.codec.http2.Http2FrameLogger;
-import molteneq.test.mod.ExampleMod;
-import molteneq.test.mod.registration.ModBlockRegistry;
-import net.minecraft.client.renderer.block.model.BlockModel;
+import molteneq.testmod.ExampleMod;
+import molteneq.testmod.registration.ModBlockRegistry;
 import net.minecraft.core.Direction;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.resources.ResourceLocation;
@@ -15,10 +13,10 @@ import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.client.model.generators.ConfiguredModel;
 import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
-import net.minecraftforge.fml.common.Mod;
 
 import java.util.function.Function;
 
+//Minden állapothoz tudunk/kell egy modellt megadni
 public class ModBlockStates extends BlockStateProvider {
 
     public ModBlockStates(DataGenerator gen, ExistingFileHelper exFileHelper) {
@@ -63,6 +61,7 @@ public class ModBlockStates extends BlockStateProvider {
     // ó, egy jó kis lambdás kifejezés :D (+ egy methódus, ami blokkálopt alapján meghatározza a modellt)
     private void orientedBlock(Block block, Function<BlockState, ModelFile> modelFunc){
         getVariantBuilder(block)
+                //minden állapotlehetőségre
                 .forAllStates(blockState -> {
                     Direction direction = blockState.getValue(BlockStateProperties.FACING);
                     // Mi a... ezt át kell majd nagyon nézni :O

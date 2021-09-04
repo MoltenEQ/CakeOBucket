@@ -1,16 +1,13 @@
-package molteneq.test.mod.data.client;
+package molteneq.testmod.data.client;
 
-import molteneq.test.mod.ExampleMod;
-import molteneq.test.mod.data.DataGenerators;
-import molteneq.test.mod.registration.ModItemRegistry;
+import molteneq.testmod.ExampleMod;
+import molteneq.testmod.registration.ModBlockRegistry;
+import molteneq.testmod.registration.ModItemRegistry;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.client.model.generators.ItemModelBuilder;
 import net.minecraftforge.client.model.generators.ItemModelProvider;
-import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
-
-import static molteneq.test.mod.data.client.ClientSetup.DISTANCE_PROPERTY;
 
 // Itt adunk a tárgyaknak modellt? hasonlóan a blokkoknál (mármint a élerakott blokkok) is?
 public class ModItemModelProvider extends ItemModelProvider{
@@ -37,10 +34,10 @@ public class ModItemModelProvider extends ItemModelProvider{
         getBuilder(ModItemRegistry.TEST_ITEM.get().getRegistryName().getPath())
                 .parent(getExistingFile(mcLoc("item/handheld")))
                 .texture("layer0", "item/temp0")
-                .override().predicate(DISTANCE_PROPERTY,0).model(createTestModel(0)).end() //felülírások a DISTANCE pop alapján
-                .override().predicate(DISTANCE_PROPERTY,1).model(createTestModel(1)).end()
-                .override().predicate(DISTANCE_PROPERTY,2).model(createTestModel(2)).end()
-                .override().predicate(DISTANCE_PROPERTY,3).model(createTestModel(3)).end();
+                .override().predicate(ClientSetup.DISTANCE_PROPERTY,0).model(createTestModel(0)).end() //felülírások a DISTANCE pop alapján
+                .override().predicate(ClientSetup.DISTANCE_PROPERTY,1).model(createTestModel(1)).end()
+                .override().predicate(ClientSetup.DISTANCE_PROPERTY,2).model(createTestModel(2)).end()
+                .override().predicate(ClientSetup.DISTANCE_PROPERTY,3).model(createTestModel(3)).end();
 
 //        withExistingParent("test_block", modLoc("block/test_bock"));
 //        withExistingParent( "test_sword", modLoc("block/test_sword"));
@@ -50,6 +47,9 @@ public class ModItemModelProvider extends ItemModelProvider{
 //
 //        builder(itemGenerated, "test_sword");
 //        builder(itemGenerated, "test_item");
+
+        // a generátor blokk tárgyi formájához kell
+        withExistingParent(ModItemRegistry.GEN_BLOCK_ITEM.get().getRegistryName().getPath(),new ResourceLocation(ExampleMod.MODID, "block/generator"));
     }
 
     //

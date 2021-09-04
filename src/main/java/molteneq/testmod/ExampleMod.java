@@ -7,11 +7,11 @@
    - elfogyasztás után nem vész el, hanem csökken a tartóssága TODO
    - EXTRA: akár el is lehet varázsolni, hogy tartósabb legyen TODO
 * */
-package molteneq.test.mod;
+package molteneq.testmod;
 
-import molteneq.test.mod.data.client.ClientSetup;
-import molteneq.test.mod.registration.ModBlockRegistry;
-import molteneq.test.mod.registration.ModItemRegistry;
+import molteneq.testmod.data.client.ClientSetup;
+import molteneq.testmod.registration.ModBlockRegistry;
+import molteneq.testmod.registration.ModItemRegistry;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
@@ -33,7 +33,7 @@ public class ExampleMod
     public static final String MODID = "testmod";
     public static final String MODNAME = "Test Mod";
     // Directly reference a log4j logger.
-    private static final Logger LOGGER = LogManager.getLogger(); //pl: hibak logolasara, ne spammeld
+    public static final Logger LOGGER = LogManager.getLogger(); //pl: hibak logolasara, ne spammeld
 
     /**
      * Initcializáláshoz, a konstruktor hívja meg

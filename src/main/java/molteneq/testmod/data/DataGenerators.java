@@ -1,10 +1,9 @@
-package molteneq.test.mod.data;
+package molteneq.testmod.data;
 
-import molteneq.test.mod.ExampleMod;
-import molteneq.test.mod.data.client.ModBlockStates;
-import molteneq.test.mod.data.client.ModItemModelProvider;
+import molteneq.testmod.ExampleMod;
+import molteneq.testmod.data.client.ModBlockStates;
+import molteneq.testmod.data.client.ModItemModelProvider;
 import net.minecraft.data.DataGenerator;
-import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.forge.event.lifecycle.GatherDataEvent;
@@ -22,15 +21,16 @@ public class DataGenerators {
          DataGenerator gen = event.getGenerator();
          if (event.includeClient())
          {
-             ExistingFileHelper existingFileHelper = event.getExistingFileHelper();
-             gen.addProvider(new ModItemModelProvider(gen, existingFileHelper));
-             gen.addProvider(new ModBlockStates(gen,existingFileHelper));
+             // sorrend fontos, mert a blokkitem-ek a blokkok modelljeit használják
+             gen.addProvider(new ModBlockStates(gen,event.getExistingFileHelper()));
+             gen.addProvider(new ModItemModelProvider(gen, event.getExistingFileHelper()));
          }
 
         if (event.includeServer())
         {
-            ExistingFileHelper existingFileHelper = event.getExistingFileHelper();
             gen.addProvider(new RecipeGen(gen));
+            gen.addProvider(new LootTables(gen));
+            gen.addProvider(new Tags(gen, event.getExistingFileHelper()));
         }
     }
 }

@@ -1,13 +1,10 @@
-package molteneq.test.mod.registration;
+package molteneq.testmod.registration;
 
-import molteneq.test.mod.ExampleMod;
-import molteneq.test.mod.blocks.GeneratorBlock;
+import molteneq.testmod.ExampleMod;
+import molteneq.testmod.blocks.GeneratorBlock;
 import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.material.Material;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.fmllegacy.RegistryObject;
@@ -23,8 +20,7 @@ public class ModBlockRegistry {
     //blokk regisztrálása a listánkba (hogy jöjjön létre)
     public static final RegistryObject<Block> GEN_BLOCK = BLOCKS.register("gen_block", GeneratorBlock::new); // A saját blokk konstruktorát hívja meg
 
-    // Tárgy készítése a blokkhoz.
-    public static final RegistryObject<Item>  GEN_BLOCK_ITEM =  ModItemRegistry.ITEMS.register("gen_block", () -> new BlockItem(GEN_BLOCK.get(), new Item.Properties()));
+
 
     public static void Init()
     {

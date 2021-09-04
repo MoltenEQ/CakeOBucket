@@ -1,4 +1,4 @@
-package molteneq.test.mod.blocks;
+package molteneq.testmod.blocks;
 
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.block.Block;

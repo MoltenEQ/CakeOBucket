@@ -1,4 +1,4 @@
-package molteneq.test.mod.items;
+package molteneq.testmod.items;
 
 import net.minecraft.ChatFormatting;
 import net.minecraft.Util;

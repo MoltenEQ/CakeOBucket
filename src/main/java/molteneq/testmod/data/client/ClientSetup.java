@@ -1,10 +1,9 @@
-package molteneq.test.mod.data.client;
+package molteneq.testmod.data.client;
 
-import molteneq.test.mod.ExampleMod;
-import molteneq.test.mod.items.TestItem;
-import molteneq.test.mod.registration.ModItemRegistry;
+import molteneq.testmod.ExampleMod;
+import molteneq.testmod.items.TestItem;
+import molteneq.testmod.registration.ModItemRegistry;
 import net.minecraft.client.renderer.item.ItemProperties;
-import net.minecraft.client.tutorial.Tutorial;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 

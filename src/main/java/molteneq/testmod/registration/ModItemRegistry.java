@@ -1,9 +1,8 @@
-package molteneq.test.mod.registration;
+package molteneq.testmod.registration;
 
-import molteneq.test.mod.ExampleMod;
-import molteneq.test.mod.items.TestItem;
+import molteneq.testmod.ExampleMod;
+import molteneq.testmod.items.TestItem;
 import net.minecraft.world.item.*;
-import net.minecraft.world.level.block.Block;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.fmllegacy.RegistryObject;
@@ -35,6 +34,10 @@ public class ModItemRegistry {
                 0.1f /*Attack speed*/,
                 new Item.Properties().defaultDurability(1024) // tartósság
                         .tab(CreativeModeTab.TAB_COMBAT)); // hol jelenjen meg a creatív menüben
+    });
+    // Tárgy készítése a blokkhoz.
+    public static final RegistryObject<Item>  GEN_BLOCK_ITEM =  ModItemRegistry.ITEMS.register("gen_block", () -> {
+        return new BlockItem(ModBlockRegistry.GEN_BLOCK.get(), new Item.Properties().tab(CreativeModeTab.TAB_DECORATIONS));
     });
 
 //    /**

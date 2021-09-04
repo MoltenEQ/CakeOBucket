@@ -1,6 +1,7 @@
-package molteneq.test.mod.data;
+package molteneq.testmod.data;
 
-import molteneq.test.mod.registration.ModItemRegistry;
+import molteneq.testmod.registration.ModBlockRegistry;
+import molteneq.testmod.registration.ModItemRegistry;
 import net.minecraft.advancements.critereon.InventoryChangeTrigger;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.recipes.FinishedRecipe;
@@ -28,6 +29,17 @@ public class RecipeGen extends RecipeProvider {
                 .define('y', Items.NETHER_STAR)
                 .group("tutorial")
                 .unlockedBy("bones", InventoryChangeTrigger.TriggerInstance.hasItems(Items.NETHER_STAR))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(ModItemRegistry.GEN_BLOCK_ITEM.get())
+                .pattern("iii")
+                .pattern("ici")
+                .pattern("igi")//mindig egyforma husszú kell legyen minden aorbN!
+                .define('i', Tags.Items.INGOTS_IRON)
+                .define('c', Items.COAL_BLOCK)
+                .define('g', Tags.Items.INGOTS_GOLD)
+                .group("tutorial")
+                .unlockedBy("gold", InventoryChangeTrigger.TriggerInstance.hasItems(Items.GOLD_INGOT))
                 .save(consumer);
     }
 }
