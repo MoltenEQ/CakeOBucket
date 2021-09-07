@@ -42,7 +42,7 @@ public class ExampleMod
     private void Initialization() {
         LOGGER.info(MODNAME+ " init started");
         ModBlockRegistry.Init();
-        ModItemRegistry.Init(); //A TÁRGYAK MINDIG A BLOKKOK UTÁN LEGYENEK REGISZTRÁLVA!
+        ModItemRegistry.Init(); //A TáRGYAK MINDIG A BLOKKOK UTáN LEGYENEK REGISZTRáLVA!
         ModBERegisrty.Init();
     }
 

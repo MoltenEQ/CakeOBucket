@@ -11,7 +11,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 /**
  * Itt regisztráljuk azokat a tárgyakat, amelyekhez nem tartozik blokk
- *  A TÁRGYAK MINDIG A BLOKKOK UTÁN LEGYENEK REGISZTRÁLVA!
+ *
  */
 public class ModItemRegistry {
 
