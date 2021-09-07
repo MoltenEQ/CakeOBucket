@@ -10,6 +10,7 @@
 package molteneq.testmod;
 
 import molteneq.testmod.data.client.ClientSetup;
+import molteneq.testmod.registration.ModBERegisrty;
 import molteneq.testmod.registration.ModBlockRegistry;
 import molteneq.testmod.registration.ModItemRegistry;
 import net.minecraft.world.level.block.Block;
@@ -41,7 +42,8 @@ public class ExampleMod
     private void Initialization() {
         LOGGER.info(MODNAME+ " init started");
         ModBlockRegistry.Init();
-        ModItemRegistry.Init();
+        ModItemRegistry.Init(); //A TÁRGYAK MINDIG A BLOKKOK UTÁN LEGYENEK REGISZTRÁLVA!
+        ModBERegisrty.Init();
     }
 
     public ExampleMod() {
