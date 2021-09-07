@@ -53,7 +53,7 @@ public class GeneratorBE extends BlockEntity {
 
     public void tickServer(BlockState state){
 
-        //égés
+        //égés, akkor is, ha tele vagyunk...
         if (counter >0) {
             counter--;
             energyStorage.addEnergy(50);

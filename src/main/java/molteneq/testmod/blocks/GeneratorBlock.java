@@ -23,6 +23,7 @@ public class GeneratorBlock extends Block implements EntityBlock {
                 .sound(SoundType.METAL) //Hang
                 .lightLevel(state -> state.getValue(BlockStateProperties.POWERED) ? 14 : 0) // ha el van látva árammal, akkor 14-es erősségű fényt bocsájt ki
                 .strength(2.0f) //Mennyi idő csákánnyal bányászni
+                
         );
     }
 
@@ -37,7 +38,9 @@ public class GeneratorBlock extends Block implements EntityBlock {
     @Override
     public BlockState getStateForPlacement(BlockPlaceContext context) {
         // A játékos "nézésével szemben" legyen a blokk mutatója
-        return defaultBlockState().setValue(BlockStateProperties.FACING, context.getNearestLookingDirection().getOpposite());
+        return defaultBlockState()
+                .setValue(BlockStateProperties.FACING, context.getNearestLookingDirection().getOpposite())
+                .setValue(BlockStateProperties.POWERED,false); //valamiért az alap az igaz
     }
 
     //Blokkentitás létrehozása a blokkhoz
