@@ -12,6 +12,7 @@ package molteneq.testmod;
 import molteneq.testmod.data.client.ClientSetup;
 import molteneq.testmod.registration.ModBERegisrty;
 import molteneq.testmod.registration.ModBlockRegistry;
+import molteneq.testmod.registration.ModContaienrReg;
 import molteneq.testmod.registration.ModItemRegistry;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.MinecraftForge;
@@ -44,6 +45,7 @@ public class ExampleMod
         ModBlockRegistry.Init();
         ModItemRegistry.Init(); //A TáRGYAK MINDIG A BLOKKOK UTáN LEGYENEK REGISZTRáLVA!
         ModBERegisrty.Init();
+        ModContaienrReg.Init();
     }
 
     public ExampleMod() {
